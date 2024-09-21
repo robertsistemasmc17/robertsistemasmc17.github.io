@@ -39,7 +39,14 @@
         </button>
         
     </div>
-
+    <script>
+        const spans = document.querySelectorAll("span");
+        spans.forEach(span => {
+            if (span.textContent === "_") {
+                span.innerHTML = "&nbsp;&nbsp;"; // Doble espacio con entidad HTML
+            }
+        });
+    </script>
     <style>
         /* Estilos para el div que contiene las imágenes */
         .image-container {
