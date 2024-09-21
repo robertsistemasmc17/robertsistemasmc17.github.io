@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>FLORES</title>
+</head>
+<body>
+    <div class="image-container">
+        <img src="img/robertphoto.jpg" alt="Imagen 1">
+        <img src="img/haymephoto.jpg" alt="Imagen 2">
+    </div>
+    <div class="greetings">
+        <span>H</span>
+        <span>O</span>
+        <span>L</span>
+        <span>A</span>
+        <span>_</span>
+        <span>M</span>
+        <span>I</span>
+        <span>_</span>
+        <span>A</span>
+        <span>M</span>
+        <span>O</span>
+        <span>R</span>
+    </div>
+    <div class="greetings">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="description">
+        <span>Tengo un regalo especial para ti!!</span>
+    </div>
+    <div class="button">
+        <button>
+            <a href="principal.html">Haga Clic</a>
+        </button>
+        
+    </div>
+    <script>
+        const spans = document.querySelectorAll("span");
+        spans.forEach(span => {
+            if (span.textContent === "_") {
+                span.innerHTML = "&nbsp;&nbsp;"; // Doble espacio con entidad HTML
+            }
+        });
+    </script>
+    <style>
+        /* Estilos para el div que contiene las imágenes */
+        .image-container {
+            display: flex; /* Para mostrar las imágenes una al lado de la otra */
+            justify-content: center; /* Centra las imágenes horizontalmente */
+            gap: 20px; /* Espacio entre las imágenes */
+        }
+        .image-container img {
+            max-width: 200px; /* Asegura que las imágenes no superen el tamaño del contenedor */
+            height: auto; /* Mantiene la proporción de las imágenes */
+            border: 2px solid #000; /* Borde opcional para las imágenes */
+        }
+    </style>
+</body>
+</html>
